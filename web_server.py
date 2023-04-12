@@ -9,7 +9,7 @@ FOLDER = "/Users/vomne/"
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return "<p>Hello, World</p>"
 
 
 @app.route('/api/entries/')
@@ -31,7 +31,6 @@ def save_entries():
         entry_manager.entries.append(entry)
     entry_manager.save()
     return {'status': 'success'}
-
 
 @app.after_request
 def after_request(response):
